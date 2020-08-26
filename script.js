@@ -16,11 +16,9 @@ const start = () => {
             if (!(startBtn.classList.contains('started'))) clearInterval(interval);
         }, 100);
         resetBtn.addEventListener('click', () => {
-            if (startBtn.classList.contains('started')) {
-                clearInterval(interval);
-                startBtn.classList.remove('started');
-                startBtn.textContent = 'start';
-            }
+            clearInterval(interval);
+            startBtn.classList.remove('started');
+            startBtn.textContent = 'start';
             timer.textContent = '---';
         });
     } else {
